@@ -12,6 +12,7 @@
   "scripts": {
     "start": "npm run prepare && node build/src/index.js",
     "dev": "ts-node-dev src/index.ts",
+    "array-functions": "ts-node-dev src/array-functions.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "gts check",
     "clean": "gts clean",
