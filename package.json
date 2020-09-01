@@ -14,6 +14,8 @@
     "dev": "ts-node-dev src/index.ts",
     "array-functions": "ts-node-dev src/array-functions.ts",
     "rxjs-observables": "ts-node-dev src/rxjs-observables.ts",
+    "tempy-files": "ts-node-dev src/tempy-files.ts",
+    "rovar-spraket": "node src/rovar-spraket.js",
     "lodash": "ts-node-dev src/lodash-test.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "gts check",
@@ -33,6 +35,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
-    "rxjs": "^6.6.2"
+    "rxjs": "^6.6.2",
+    "tempy": "^0.6.0"
   }
 }
