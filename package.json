@@ -15,8 +15,10 @@
     "array-functions": "ts-node-dev src/array-functions.ts",
     "rxjs-observables": "ts-node-dev src/rxjs-observables.ts",
     "tempy-files": "ts-node-dev src/tempy-files.ts",
-    "rovar-spraket": "node src/rovar-spraket.js",
+    "rovar-spraket": "node src/rovar-spraket.ts",
+    "html": "ts-node-dev src/html.ts",
     "lodash": "ts-node-dev src/lodash-test.ts",
+    "optional-chaining": "ts-node-dev src/optional-chaining.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "gts check",
     "clean": "gts clean",
@@ -25,14 +27,16 @@
     "posttest": "npm run check"
   },
   "devDependencies": {
+    "@types/html-to-text": "^5.1.1",
+    "@types/lodash": "^4.14.151",
     "@types/moment": "^2.13.0",
     "@types/node": "^13.11.1",
     "gts": "^2.0.2",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.8.3",
-    "@types/lodash": "^4.14.151"
+    "typescript": "^3.8.3"
   },
   "dependencies": {
+    "html-to-text": "^5.1.1",
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
     "rxjs": "^6.6.2",
