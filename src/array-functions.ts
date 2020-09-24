@@ -62,6 +62,13 @@ const sortByBirthDay = [...personsWithBirthday].sort((a, b) => {
   }
 });
 
+function compareObjectKeys(first: {}, second: {}) {
+  /**
+   * Returns difference between two objects
+   */
+  return Object.keys(first).filter(x => !Object.keys(second).includes(x));
+}
+
 console.log('Persons', names);
 
 console.log('ageTotal', ageTotal);
@@ -75,3 +82,10 @@ console.log('sortByNameAscending', sortByNameAscending);
 console.log('sortByNameDescending', sortByNameDescending);
 
 console.log('sortByBirthDay', sortByBirthDay);
+
+console.log(
+  compareObjectKeys(
+    {name: 'Carl', age: 38, test: 'test', birthday: '1983-03-04'},
+    {name: 'Carl', birthday: '1983-03-04'}
+  )
+);
