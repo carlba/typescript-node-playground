@@ -10,3 +10,5 @@ for (const character of firstString) {
   }
 }
 console.log(newString);
+
+export {};

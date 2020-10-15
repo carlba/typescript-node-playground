@@ -13,3 +13,5 @@ const html = `<!doctype html>
     </html>`;
 
 console.log(htmlToText.fromString(html));
+
+export {};

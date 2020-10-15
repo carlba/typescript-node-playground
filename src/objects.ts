@@ -1,7 +1,7 @@
 // Dynamic Object Properties
 const dynamicProp = 'height';
 
-const person1: {
+const person: {
   name: string;
   age: number;
   status: 'active' | 'inactive';
@@ -13,4 +13,6 @@ const person1: {
   [dynamicProp]: 183,
 };
 
-console.log(person1);
+console.log(person);
+
+export {};

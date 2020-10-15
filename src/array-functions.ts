@@ -89,3 +89,5 @@ console.log(
     {name: 'Carl', birthday: '1983-03-04'}
   )
 );
+
+export {};

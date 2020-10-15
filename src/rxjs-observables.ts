@@ -12,3 +12,5 @@ const oneRandomBooleanPerSecondFiveTimes$ = oneRandomBooleanPerSecond$.pipe(
 );
 
 oneRandomBooleanPerSecondFiveTimes$.subscribe(val => console.log(val));
+
+export {};
