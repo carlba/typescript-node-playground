@@ -15,10 +15,13 @@
     "array-functions": "ts-node-dev src/array-functions.ts",
     "rxjs-observables": "ts-node-dev src/rxjs-observables.ts",
     "tempy-files": "ts-node-dev src/tempy-files.ts",
-    "rovar-spraket": "node src/rovar-spraket.ts",
+    "rovar-spraket": "node src/rovar-spraket.js",
     "html": "ts-node-dev src/html.ts",
+    "json-to-table": "ts-node-dev src/json-to-table.ts",
     "lodash": "ts-node-dev src/lodash-test.ts",
     "optional-chaining": "ts-node-dev src/optional-chaining.ts",
+    "auth0": "ts-node-dev src/auth0.ts",
+    "moment": "ts-node-dev src/moment-playground.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "gts check",
     "clean": "gts clean",
@@ -36,10 +39,12 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "auth0-deploy-cli": "^5.2.0",
     "html-to-text": "^5.1.1",
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
     "rxjs": "^6.6.2",
-    "tempy": "^0.6.0"
+    "tempy": "^0.6.0",
+    "yaml": "^1.10.0"
   }
 }
