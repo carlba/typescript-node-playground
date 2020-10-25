@@ -1,77 +1,115 @@
+import * as index from './index';
 import * as moment from 'moment';
 
 interface Person {
   name: string;
   age: number;
-  birthday?: string;
+  birthday: string;
 }
 
-const names: Person[] = [
+const persons: Person[] = [
   {name: 'Carl', age: 37, birthday: '1983-03-04'},
   {name: 'Johanna', age: 31, birthday: '1988-07-13'},
-  {name: 'Tobias', age: 27},
-  {name: 'Erik', age: 27},
+  {name: 'Tobias', age: 27, birthday: '1990-01-01'},
+  {name: 'Roger', age: 70, birthday: '1950-02-22'},
 ];
 
-// Iterative approach
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-let totalAge = 0;
-
-for (const name of names) {
-  totalAge += name.age;
+/**
+ * Calculate the total sum of people in an array iteratively
+ * @param persons An array of persons
+ */
+function calculateTotalAgeIterative(persons: Person[]): number {
+  let totalAge = 0;
+  for (const name of persons) {
+    totalAge += name.age;
+  }
+  return totalAge;
 }
 
-// Functional Approach
-const ageTotal = names.reduce((acc, value) => {
-  acc = acc + value.age;
-  return acc;
-}, 0);
+/**
+ * Calculate the total sum of people in an array functionally
+ * @param persons An array of persons
+ * @returns The total sum of the people in the `persons` array
+ */
+function calculateTotalAgeFunctionally(persons: Person[]): number {
+  const totalAge = persons.reduce((acc, value) => {
+    acc = acc + value.age;
+    return acc;
+  }, 0);
+  return totalAge;
+}
 
-const onlyBelowAge30 = names.reduce((acc: Person[], value) => {
+const onlyBelowAge30 = persons.reduce((acc: Person[], value) => {
   if (value.age < 30) {
     acc.push(value);
   }
   return acc;
 }, []);
 
-const onlyBelowAge30Filter = names.filter(person => person.age < 30);
+const onlyBelowAge30Filter = persons.filter(person => person.age < 30);
 
-const mapAndFilter = names
+const mapAndFilter = persons
   .map(person => person.name)
   .filter(name => name.toLocaleLowerCase().startsWith('c'));
 
 // The sort method mutates the array to prevent this we need to make a copy of the
 // array before sorting. The `[...names]` syntax creates a shallow copy of the array
-
-const sortByAgeAscending = [...names].sort((a, b) => (a.age > b.age ? 1 : -1));
-const sortByAgeDescending = [...names].sort((a, b) => (a.age < b.age ? 1 : -1));
-const sortByNameAscending = [...names].sort((a, b) =>
+const sortByAgeAscending = [...persons].sort((a, b) =>
+  a.age > b.age ? 1 : -1
+);
+const sortByAgeDescending = [...persons].sort((a, b) =>
+  a.age < b.age ? 1 : -1
+);
+const sortByNameAscending = [...persons].sort((a, b) =>
   a.name.localeCompare(b.name)
 );
-const sortByNameDescending = [...names].sort((a, b) =>
+const sortByNameDescending = [...persons].sort((a, b) =>
   b.name.localeCompare(a.name)
 );
 
-const personsWithBirthday = [...names].filter(name => name.birthday);
-
-const sortByBirthDay = [...personsWithBirthday].sort((a, b) => {
-  if (a.birthday && b.birthday) {
-    return moment.utc(a.birthday) > moment.utc(a.birthday) ? 1 : -1;
-  } else {
-    return -1;
-  }
-});
-
-function compareObjectKeys(first: {}, second: {}) {
-  /**
-   * Returns difference between two objects
-   */
-  return Object.keys(first).filter(x => !Object.keys(second).includes(x));
+interface Birthy {
+  birthday: string;
 }
 
-console.log('Persons', names);
+/**
+ *
+ * @param arr An array containing objects with a birthday
+ * @return A new instance of array in `arr` sorted by birthday
+ */
+function sortByBirthDay<T extends Birthy>(
+  arr: T[],
+  order: 'asc' | 'desc' = 'asc'
+): T[] {
+  const sortByBirthDay = [...arr].sort((a, b) => {
+    if (order === 'desc') {
+      return moment.utc(a.birthday) > moment.utc(b.birthday) ? 1 : -1;
+    } else if (order === 'asc') {
+      return moment.utc(a.birthday) < moment.utc(b.birthday) ? 1 : -1;
+    } else {
+      return -1;
+    }
+  });
+  return sortByBirthDay;
+}
 
-console.log('ageTotal', ageTotal);
+const person = {test: 'test', name: 'Carl'};
+/**
+ * Shows keys that exists in both `first` and `second` object
+ * @param first The first object
+ * @param second The second object
+ */
+function compareObjectKeys<T extends object, U extends Partial<T>>(
+  first: T,
+  second: U
+): (keyof Partial<T>)[] {
+  return (Object.keys(first) as (keyof T)[]).filter(
+    x => !(Object.keys(second) as (keyof U)[]).includes(x)
+  );
+}
+
+console.log('Persons', persons);
+
+console.log('ageTotal', calculateTotalAgeFunctionally(persons));
 console.log('onlyBelowAge30', onlyBelowAge30);
 console.log('onlyBelowAge30Filter', onlyBelowAge30Filter);
 console.log('mapAndFilter', mapAndFilter);
@@ -81,11 +119,11 @@ console.log('sortByAgeDescending', sortByAgeDescending);
 console.log('sortByNameAscending', sortByNameAscending);
 console.log('sortByNameDescending', sortByNameDescending);
 
-console.log('sortByBirthDay', sortByBirthDay);
+console.log('sortByBirthDay', sortByBirthDay(persons));
 
 console.log(
   compareObjectKeys(
-    {name: 'Carl', age: 38, test: 'test', birthday: '1983-03-04'},
+    {1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04'},
     {name: 'Carl', birthday: '1983-03-04'}
   )
 );
