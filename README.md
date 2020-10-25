@@ -7,28 +7,28 @@ npm install
 ```
 
 ## Usage
-      
+
 ## Maintaining the repo
 
 It is important to keep the dependencies of this repo up to date. Do these steps:
- 
+
 1. First ensure that the `npm-check-updates` is installed globally
 
    ```bash
    npm install -g npm-check-updates
    ```
-   
-2. Then update the version identifiers of the `package.json` and `package-lock.json` files to the latest version: 
-    
+
+2. Then update the version identifiers of the `package.json` and `package-lock.json` files to the latest version:
+
    ```bash
     ncu -u
-    ```
+   ```
 
 3. Update your environment:
 
-    ```bash
-    npm update
-    ```
+   ```bash
+   npm update
+   ```
 
 ## Tests
 
@@ -48,6 +48,8 @@ None
 - [@types/node](https://ghub.io/@types/node): TypeScript definitions for Node.js
 
 ## Information
+
+https://blog.sapegin.me/all/avoid-loops
 
 ## License
 
