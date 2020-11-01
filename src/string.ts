@@ -1,12 +1,29 @@
 import { assert } from './utils';
 
+/**
+ * Return the length of a string
+ * @param str A string
+ */
+function lengthOfString(str: string): number {
+  return str.length;
+}
+
+/**
+ * Return the first character of a string
+ * @param str A string
+ */
 function firstCharacterOfString(str: string) {
   return str.charAt(0);
 }
 
+/**
+ * Return the last character of a string
+ * @param str A string
+ */
 function lastCharacterOfString(str: string) {
   return str.charAt(str.length - 1);
 }
+
 /**
  * Convert a string into an array
  * @param str

@@ -20,7 +20,6 @@
     "json-to-table": "ts-node-dev src/json-to-table.ts",
     "lodash": "ts-node-dev src/lodash-test.ts",
     "optional-chaining": "ts-node-dev src/optional-chaining.ts",
-    "auth0": "ts-node-dev src/auth0.ts",
     "moment": "ts-node-dev src/moment-playground.ts",
     "docs": "typedoc --out docs src",
     "test": "echo \"Error: no test specified\" && exit 1",
