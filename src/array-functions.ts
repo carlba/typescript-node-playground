@@ -8,10 +8,10 @@ interface Person {
 }
 
 const persons: Person[] = [
-  {name: 'Carl', age: 37, birthday: '1983-03-04'},
-  {name: 'Johanna', age: 31, birthday: '1988-07-13'},
-  {name: 'Tobias', age: 27, birthday: '1990-01-01'},
-  {name: 'Roger', age: 70, birthday: '1950-02-22'},
+  { name: 'Carl', age: 37, birthday: '1983-03-04' },
+  { name: 'Johanna', age: 31, birthday: '1988-07-13' },
+  { name: 'Tobias', age: 27, birthday: '1990-01-01' },
+  { name: 'Roger', age: 70, birthday: '1950-02-22' }
 ];
 
 /**
@@ -48,24 +48,14 @@ const onlyBelowAge30 = persons.reduce((acc: Person[], value) => {
 
 const onlyBelowAge30Filter = persons.filter(person => person.age < 30);
 
-const mapAndFilter = persons
-  .map(person => person.name)
-  .filter(name => name.toLocaleLowerCase().startsWith('c'));
+const mapAndFilter = persons.map(person => person.name).filter(name => name.toLocaleLowerCase().startsWith('c'));
 
 // The sort method mutates the array to prevent this we need to make a copy of the
 // array before sorting. The `[...names]` syntax creates a shallow copy of the array
-const sortByAgeAscending = [...persons].sort((a, b) =>
-  a.age > b.age ? 1 : -1
-);
-const sortByAgeDescending = [...persons].sort((a, b) =>
-  a.age < b.age ? 1 : -1
-);
-const sortByNameAscending = [...persons].sort((a, b) =>
-  a.name.localeCompare(b.name)
-);
-const sortByNameDescending = [...persons].sort((a, b) =>
-  b.name.localeCompare(a.name)
-);
+const sortByAgeAscending = [...persons].sort((a, b) => (a.age > b.age ? 1 : -1));
+const sortByAgeDescending = [...persons].sort((a, b) => (a.age < b.age ? 1 : -1));
+const sortByNameAscending = [...persons].sort((a, b) => a.name.localeCompare(b.name));
+const sortByNameDescending = [...persons].sort((a, b) => b.name.localeCompare(a.name));
 
 interface Birthy {
   birthday: string;
@@ -76,10 +66,7 @@ interface Birthy {
  * @param arr An array containing objects with a birthday
  * @return A new instance of array in `arr` sorted by birthday
  */
-function sortByBirthDay<T extends Birthy>(
-  arr: T[],
-  order: 'asc' | 'desc' = 'asc'
-): T[] {
+function sortByBirthDay<T extends Birthy>(arr: T[], order: 'asc' | 'desc' = 'asc'): T[] {
   const sortByBirthDay = [...arr].sort((a, b) => {
     if (order === 'desc') {
       return moment.utc(a.birthday) > moment.utc(b.birthday) ? 1 : -1;
@@ -92,19 +79,14 @@ function sortByBirthDay<T extends Birthy>(
   return sortByBirthDay;
 }
 
-const person = {test: 'test', name: 'Carl'};
+const person = { test: 'test', name: 'Carl' };
 /**
  * Shows keys that exists in both `first` and `second` object
  * @param first The first object
  * @param second The second object
  */
-function compareObjectKeys<T extends object, U extends Partial<T>>(
-  first: T,
-  second: U
-): (keyof Partial<T>)[] {
-  return (Object.keys(first) as (keyof T)[]).filter(
-    x => !(Object.keys(second) as (keyof U)[]).includes(x)
-  );
+function compareObjectKeys<T extends object, U extends Partial<T>>(first: T, second: U): (keyof Partial<T>)[] {
+  return (Object.keys(first) as (keyof T)[]).filter(x => !(Object.keys(second) as (keyof U)[]).includes(x));
 }
 
 console.log('Persons', persons);
@@ -123,8 +105,8 @@ console.log('sortByBirthDay', sortByBirthDay(persons));
 
 console.log(
   compareObjectKeys(
-    {1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04'},
-    {name: 'Carl', birthday: '1983-03-04'}
+    { 1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04' },
+    { name: 'Carl', birthday: '1983-03-04' }
   )
 );
 

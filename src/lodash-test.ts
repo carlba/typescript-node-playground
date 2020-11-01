@@ -8,7 +8,7 @@ const flattenedNames = lodash.flatMap(names, name => {
 
 console.log(flattenedNames);
 
-const person = {name: 'Carl', age: 37};
+const person = { name: 'Carl', age: 37 };
 
 console.log(lodash.omit(person, ['age']));
 

@@ -11,7 +11,7 @@ function assert(expected: any, actual: any): string {
   }
 }
 
- function filterUntil<K>(
+function filterUntil<K>(
   arr: K[],
   callBackFn: (arg0: K, index: number) => boolean,
   untilCallbackFn: (arg0: K[]) => boolean
@@ -29,4 +29,4 @@ function assert(expected: any, actual: any): string {
   return matches;
 }
 
-export {assert, filterUntil};
+export { assert, filterUntil };

@@ -16,7 +16,7 @@ const superAdminPermissions = [
   'all:devices',
   'all:projects',
   'all:assets',
-  'all:content',
+  'all:content'
 ];
 
 const userPermissions = [
@@ -27,7 +27,7 @@ const userPermissions = [
   'all:projects',
   'all:assets',
   'all:content',
-  'read:settings',
+  'read:settings'
 ];
 
 export {};

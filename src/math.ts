@@ -1,7 +1,4 @@
-import {range} from 'lodash';
-import {assert} from './utils';
-
-import * as ms from 'ms';
+import { assert } from './utils';
 
 /**
  * @param num A float or integer

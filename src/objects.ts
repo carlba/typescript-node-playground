@@ -13,7 +13,7 @@ function dynamicObjectProperties() {
     name: 'Carl',
     age: 37,
     status: 'active',
-    [dynamicProp]: 183,
+    [dynamicProp]: 183
   };
   console.log(person);
 }
