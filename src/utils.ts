@@ -1,8 +1,18 @@
 import * as chalk from 'chalk';
 
-function assert(expected: any, actual: any): string {
-  if (expected === actual) {
-    const message = chalk.green(`${expected} === ${actual}`);
+type NumStringArray = (string | number)[];
+
+function shallowEqual<T extends NumStringArray | string | number>(first: T, second: T) {
+  if (Array.isArray(first) && Array.isArray(second)) {
+    return first.length === second.length && first.every((value, index) => value === second[index]);
+  } else {
+    return first === second;
+  }
+}
+
+function assert<T extends NumStringArray | string | number>(expected: T, actual: T): string {
+  if (shallowEqual(expected, actual)) {
+    const message = chalk.green(`${JSON.stringify(expected)} === ${JSON.stringify(actual)}`);
     return message;
   } else {
     const message = chalk.red(`${expected} !== ${actual}`);
