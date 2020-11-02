@@ -1,4 +1,4 @@
-# typescript-node-sample-project
+# Typescript Playground
 
 ## Installation
 
@@ -6,7 +6,9 @@
 npm install
 ```
 
-## Usage
+## Documentation
+
+see [Documentation](./DOCS.md)
 
 ## Maintaining the repo
 
