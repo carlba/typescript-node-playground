@@ -2,7 +2,7 @@ import * as chalk from 'chalk';
 
 type NumStringArray = (string | number)[];
 
-function shallowEqual<T extends NumStringArray | string | number>(first: T, second: T) {
+function shallowEqual<T extends NumStringArray | string | number | boolean>(first: T, second: T) {
   if (Array.isArray(first) && Array.isArray(second)) {
     return first.length === second.length && first.every((value, index) => value === second[index]);
   } else {
@@ -10,15 +10,18 @@ function shallowEqual<T extends NumStringArray | string | number>(first: T, seco
   }
 }
 
-function assert<T extends NumStringArray | string | number>(expected: T, actual: T): string {
+function assert<T extends NumStringArray | string | number | boolean>(
+  expected: T,
+  actual: T,
+  message?: string
+): string {
+  let result = message ? `${message}:` : '';
   if (shallowEqual(expected, actual)) {
-    const message = chalk.green(`${JSON.stringify(expected)} === ${JSON.stringify(actual)}`);
-    return message;
+    result += `${JSON.stringify(expected)} === ${JSON.stringify(actual)}`;
   } else {
-    const message = chalk.red(`${expected} !== ${actual}`);
-    console.log(message);
-    return message; // throw new Error(message);
+    result += `${expected} !== ${actual}`;
   }
+  return result;
 }
 
 function filterUntil<K>(
