@@ -89,6 +89,14 @@ function compareObjectKeys<T extends object, U extends Partial<T>>(first: T, sec
   return (Object.keys(first) as (keyof T)[]).filter(x => !(Object.keys(second) as (keyof U)[]).includes(x));
 }
 
+function range(num: number) {
+  return [...Array(num).keys()];
+}
+
+function generateMatrix(size: number) {
+  return range(size).map(x => range(size).map(y => `${x},${y}`));
+}
+
 console.log('Persons', persons);
 
 console.log('ageTotal', calculateTotalAgeFunctionally(persons));
@@ -109,5 +117,7 @@ console.log(
     { name: 'Carl', birthday: '1983-03-04' }
   )
 );
+
+console.log(generateMatrix(5));
 
 export {};
