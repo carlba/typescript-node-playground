@@ -32,7 +32,13 @@
  * @packageDocumentation
  */
 
+import { fstat, ReadStream } from 'fs';
+import * as readLine from 'readline';
+import * as fs from 'fs';
+import * as path from 'path';
+
 import { assert } from './utils';
+import { Readable, Writable, Transform, Duplex } from 'stream';
 
 /**
  * Replaces all occurrences of a string in another string
@@ -119,13 +125,38 @@ function reverseString(str: string): string {
   return str.split('').reverse().join('');
 }
 
-console.log(assert(firstCharacterOfString('evil'), 'e'));
-console.log(assert(lastCharacterOfString('evil'), 'l'));
-console.log(assert(reverseStringRecursively('evil'), 'live'));
-console.log(assert(reverseStringRecursively('evil'), 'live'));
-console.log(assert(reverseString('evil'), 'live'));
-console.log(assert(firstWord('Carl is my name'), 'Carl'));
-console.log(assert(getArrayFromString('string'), ['s', 't', 'r', 'i', 'n', 'g']));
-console.log(assert(normalize('20-05-2017'), '20/05/2017'));
+export function removeLines(stream: ReadStream, num: number) {
+  const outputStream = new Duplex({ read: size => true });
+
+  const rl = readLine.createInterface({ input: stream, crlfDelay: Infinity });
+  let count = 0;
+  rl.on('line', line => {
+    if (count < 2) {
+      outputStream.push(line);
+      count += 1;
+    }
+  });
+  rl.on('end', () => outputStream.push(null));
+
+  return outputStream;
+}
+
+// console.log(assert(firstCharacterOfString('evil'), 'e'));
+// console.log(assert(lastCharacterOfString('evil'), 'l'));
+// console.log(assert(reverseStringRecursively('evil'), 'live'));
+// console.log(assert(reverseStringRecursively('evil'), 'live'));
+// console.log(assert(reverseString('evil'), 'live'));
+// console.log(assert(firstWord('Carl is my name'), 'Carl'));
+// console.log(assert(getArrayFromString('string'), ['s', 't', 'r', 'i', 'n', 'g']));
+// console.log(assert(normalize('20-05-2017'), '20/05/2017'));
+// const testStream = fs.createReadStream(path.join(__dirname, 'test.txt'));
+// removeLines(testStream, 3).on('data', data => console.log(data.toString()));
+
+const test = `
+test
+
+`;
+
+console.log(test);
 
 export {};

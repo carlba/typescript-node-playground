@@ -97,27 +97,46 @@ function generateMatrix(size: number) {
   return range(size).map(x => range(size).map(y => `${x},${y}`));
 }
 
-console.log('Persons', persons);
+// console.log('Persons', persons);
 
-console.log('ageTotal', calculateTotalAgeFunctionally(persons));
-console.log('onlyBelowAge30', onlyBelowAge30);
-console.log('onlyBelowAge30Filter', onlyBelowAge30Filter);
-console.log('mapAndFilter', mapAndFilter);
+// console.log('ageTotal', calculateTotalAgeFunctionally(persons));
+// console.log('onlyBelowAge30', onlyBelowAge30);
+// console.log('onlyBelowAge30Filter', onlyBelowAge30Filter);
+// console.log('mapAndFilter', mapAndFilter);
 
-console.log('sortByAgeAscending', sortByAgeAscending);
-console.log('sortByAgeDescending', sortByAgeDescending);
-console.log('sortByNameAscending', sortByNameAscending);
-console.log('sortByNameDescending', sortByNameDescending);
+// console.log('sortByAgeAscending', sortByAgeAscending);
+// console.log('sortByAgeDescending', sortByAgeDescending);
+// console.log('sortByNameAscending', sortByNameAscending);
+// console.log('sortByNameDescending', sortByNameDescending);
 
-console.log('sortByBirthDay', sortByBirthDay(persons));
+// console.log('sortByBirthDay', sortByBirthDay(persons));
 
-console.log(
-  compareObjectKeys(
-    { 1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04' },
-    { name: 'Carl', birthday: '1983-03-04' }
-  )
-);
+// console.log(
+//   compareObjectKeys(
+//     { 1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04' },
+//     { name: 'Carl', birthday: '1983-03-04' }
+//   )
+// );
 
-console.log(generateMatrix(5));
+// console.log(generateMatrix(5));
+
+// function showDiff() {
+//   const arr1 = ['calle', 'johanna', 'erik'];
+//   const arr2 = ['calle', 'johanna', 'erik', 'test2'];
+
+//   console.log(arr1.filter(item => !arr2.includes(item)));
+//   console.log(arr2.filter(item => !arr1.includes(item)));
+// }
+
+// showDiff();
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const pairwiseNumbers = [];
+for (let i = 0; i < numbers.length; i += 2) {
+  pairwiseNumbers.push([numbers[i], numbers[i + 1]]);
+}
+
+console.log(pairwiseNumbers);
 
 export {};

@@ -1,4 +1,5 @@
 import * as chalk from 'chalk';
+import * as uuid from 'uuid';
 
 type NumStringArray = (string | number)[];
 
@@ -40,6 +41,10 @@ function filterUntil<K>(
     }
   }
   return matches;
+}
+
+export function generateUUID() {
+  return uuid.v4();
 }
 
 export { assert, filterUntil };
