@@ -1,12 +1,13 @@
-import * as index from './index';
-import * as moment from 'moment';
+import moment from 'moment';
 
 interface Person {
   name: string;
   age: number;
   birthday: string;
 }
-
+/**
+ * A typed array of persons
+ */
 const persons: Person[] = [
   { name: 'Carl', age: 37, birthday: '1983-03-04' },
   { name: 'Johanna', age: 31, birthday: '1988-07-13' },
@@ -39,6 +40,9 @@ function calculateTotalAgeFunctionally(persons: Person[]): number {
   return totalAge;
 }
 
+/**
+ * The reduce method is used to get the persons that are younger than 30
+ */
 const onlyBelowAge30 = persons.reduce((acc: Person[], value) => {
   if (value.age < 30) {
     acc.push(value);
@@ -48,21 +52,35 @@ const onlyBelowAge30 = persons.reduce((acc: Person[], value) => {
 
 const onlyBelowAge30Filter = persons.filter(person => person.age < 30);
 
-const mapAndFilter = persons.map(person => person.name).filter(name => name.toLocaleLowerCase().startsWith('c'));
+const mapAndFilter = persons
+  .map(person => person.name)
+  .filter(name => name.toLocaleLowerCase().startsWith('c'));
 
-// The sort method mutates the array to prevent this we need to make a copy of the
-// array before sorting. The `[...names]` syntax creates a shallow copy of the array
-const sortByAgeAscending = [...persons].sort((a, b) => (a.age > b.age ? 1 : -1));
-const sortByAgeDescending = [...persons].sort((a, b) => (a.age < b.age ? 1 : -1));
-const sortByNameAscending = [...persons].sort((a, b) => a.name.localeCompare(b.name));
-const sortByNameDescending = [...persons].sort((a, b) => b.name.localeCompare(a.name));
+/**
+ * The sort method mutates the array to prevent this we need to make a copy of the
+ * array before sorting. The `[...names]` syntax creates a shallow copy of the array by
+ * using that instead of the original array we prevent the mutation.
+ *
+ * @param arr An array containing objects with a birthday
+ * @return A new instance of array in `arr` sorted by birthday
+ */
+function sorting() {
+  const sortByAgeAscending = [...persons].sort((a, b) => (a.age > b.age ? 1 : -1));
+  const sortByAgeDescending = [...persons].sort((a, b) => (a.age < b.age ? 1 : -1));
+  const sortByNameAscending = [...persons].sort((a, b) => a.name.localeCompare(b.name));
+  const sortByNameDescending = [...persons].sort((a, b) => b.name.localeCompare(a.name));
+  console.log('sortByAgeAscending', sortByAgeAscending);
+  console.log('sortByAgeDescending', sortByAgeDescending);
+  console.log('sortByNameAscending', sortByNameAscending);
+  console.log('sortByNameDescending', sortByNameDescending);
+}
 
 interface Birthy {
   birthday: string;
 }
 
 /**
- *
+ * Sort an array with objects containing birthdays
  * @param arr An array containing objects with a birthday
  * @return A new instance of array in `arr` sorted by birthday
  */
@@ -85,8 +103,13 @@ const person = { test: 'test', name: 'Carl' };
  * @param first The first object
  * @param second The second object
  */
-function compareObjectKeys<T extends object, U extends Partial<T>>(first: T, second: U): (keyof Partial<T>)[] {
-  return (Object.keys(first) as (keyof T)[]).filter(x => !(Object.keys(second) as (keyof U)[]).includes(x));
+function compareObjectKeys<T extends object, U extends Partial<T>>(
+  first: T,
+  second: U
+): (keyof Partial<T>)[] {
+  return (Object.keys(first) as (keyof T)[]).filter(
+    x => !(Object.keys(second) as (keyof U)[]).includes(x)
+  );
 }
 
 function range(num: number) {
@@ -97,46 +120,34 @@ function generateMatrix(size: number) {
   return range(size).map(x => range(size).map(y => `${x},${y}`));
 }
 
-// console.log('Persons', persons);
-
-// console.log('ageTotal', calculateTotalAgeFunctionally(persons));
-// console.log('onlyBelowAge30', onlyBelowAge30);
-// console.log('onlyBelowAge30Filter', onlyBelowAge30Filter);
-// console.log('mapAndFilter', mapAndFilter);
-
-// console.log('sortByAgeAscending', sortByAgeAscending);
-// console.log('sortByAgeDescending', sortByAgeDescending);
-// console.log('sortByNameAscending', sortByNameAscending);
-// console.log('sortByNameDescending', sortByNameDescending);
-
-// console.log('sortByBirthDay', sortByBirthDay(persons));
-
-// console.log(
-//   compareObjectKeys(
-//     { 1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04' },
-//     { name: 'Carl', birthday: '1983-03-04' }
-//   )
-// );
-
-// console.log(generateMatrix(5));
-
-// function showDiff() {
-//   const arr1 = ['calle', 'johanna', 'erik'];
-//   const arr2 = ['calle', 'johanna', 'erik', 'test2'];
-
-//   console.log(arr1.filter(item => !arr2.includes(item)));
-//   console.log(arr2.filter(item => !arr1.includes(item)));
-// }
-
-// showDiff();
-
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const pairwiseNumbers = [];
-for (let i = 0; i < numbers.length; i += 2) {
-  pairwiseNumbers.push([numbers[i], numbers[i + 1]]);
+function pairwise(arr: any[]) {
+  const pairwiseArr = [];
+  for (let i = 0; i < arr.length; i += 2) {
+    pairwiseArr.push([numbers[i], numbers[i + 1]]);
+  }
+  return pairwiseArr;
 }
 
-console.log(pairwiseNumbers);
+console.log('Persons', persons);
+console.log('ageTotal', calculateTotalAgeFunctionally(persons));
+console.log('onlyBelowAge30', onlyBelowAge30);
+console.log('onlyBelowAge30Filter', onlyBelowAge30Filter);
+console.log('mapAndFilter', mapAndFilter);
+console.log('sortByBirthDay', sortByBirthDay(persons));
+
+sorting();
+
+console.log(
+  'compareObjectKeys',
+  compareObjectKeys(
+    { 1: 'Carl', age: 38, test: 'test', birthday: '1983-03-04' },
+    { name: 'Carl', birthday: '1983-03-04' }
+  )
+);
+
+console.log('generateMatrix', generateMatrix(5));
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log('pairwise numbers', pairwise(numbers));
 
 export {};
