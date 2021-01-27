@@ -1,17 +1,5 @@
 import { from, interval, of } from 'rxjs';
-import {
-  map,
-  switchMap,
-  take,
-  tap,
-  flatMap,
-  count,
-  delay,
-  concatMap,
-  mergeMap,
-  toArray,
-  filter
-} from 'rxjs/operators';
+import { map, take, tap, flatMap, count, delay, mergeMap, toArray, filter } from 'rxjs/operators';
 import Axios from 'axios-observable';
 
 // const getRandomBoolean = () => Boolean(Math.round(Math.random()));
@@ -30,7 +18,7 @@ function countEmissions() {
 
   return interval(1000).pipe(
     take(3),
-    flatMap(() => person),
+    mergeMap(() => person),
     delay(1000),
     tap(value => console.log(value)),
     count(),

@@ -43,7 +43,7 @@
   "dependencies": {
     "@types/faker": "^5.1.4",
     "auth0-deploy-cli": "^5.2.0",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "axios-observable": "^1.1.3",
     "chardet": "^1.3.0",
     "faker": "^5.1.0",

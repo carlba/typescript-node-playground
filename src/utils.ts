@@ -1,4 +1,3 @@
-import * as chalk from 'chalk';
 import * as uuid from 'uuid';
 
 type NumStringArray = (string | number)[];
