@@ -8,3 +8,5 @@ node_modules/
 # Application Specific
 build/
 docs/
+
+tsconfig.tsbuildinfo
