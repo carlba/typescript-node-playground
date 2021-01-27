@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 
 const date = '2020-09-24T15:01:01.478Z';
 

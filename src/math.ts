@@ -5,16 +5,12 @@
  *
  * # Modulo
  *
- * (Modulo Operation)[https://en.wikipedia.org/wiki/Modulo_operation]
+ * [Modulo Operation](https://en.wikipedia.org/wiki/Modulo_operation)
  *
  * Modulo is a operation in computing that returns the remainder of a division. It's most
  * common usage is to check if a number is even or odd. If the is no * remainder of a division
  * with 2 the number is even.
  * {@linkcode isEven}
- *
- *
- *
- *
  *
  * ## Rounding numbers
  *
