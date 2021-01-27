@@ -1,0 +1,32 @@
+# This is a basic workflow to help you get started with Actions
+
+name: TypeDoc Build
+
+
+on:
+
+  push:
+    branches: master
+  pull_request:
+    branches:  master
+
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - uses: actions/checkout@v2      
+      - name: Install NPM CI
+        run: npm ci
+
+      - name: Cache
+        uses: zakodium/typedoc-action@master
+      - name: Deploy github pages to gh-pages branch
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: docs
