@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Cache
-        uses: zakodium/typedoc-action@master
+        uses: zakodium/typedoc-action@main
       - name: Deploy github pages to gh-pages branch
         uses: crazy-max/ghaction-github-pages@v2
         with:
