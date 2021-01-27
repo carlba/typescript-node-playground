@@ -1,4 +1,45 @@
+/**
+ * # Javascript Math
+ * The Javascript `Math` library contains many nice helper functions for mathematics related
+ * things.
+ *
+ * # Modulo
+ *
+ * (Modulo Operation)[https://en.wikipedia.org/wiki/Modulo_operation]
+ *
+ * Modulo is a operation in computing that returns the remainder of a division. It's most
+ * common usage is to check if a number is even or odd. If the is no * remainder of a division
+ * with 2 the number is even.
+ * {@linkcode isEven}
+ *
+ *
+ *
+ *
+ *
+ * ## Rounding numbers
+ *
+ * - `math.round()` - rounds a number to the nearest integer
+ * - `math.floor()` - rounds a number downwards to the nearest integer
+ * - `math.ceil()` - rounds a number upwards to the nearest integer
+ *
+ * ```typescript
+ * Math.round(1.49); //1
+ * Math.ceil(1.49); //2
+ * Math.floor(1.49); //1
+ * ```
+ *
+ * ## Random Numbers
+ * `Math.random()` returns a randomized value between 0 and 1;
+ *
+ * ```typescript
+ * const randomNumber = Math.random(); // 0.6206372241429993
+ * ```
+ *
+ * @packageDocumentation
+ */
+
 import { assert } from './utils';
+
 /**
  * Returns the last number in a decimal number
  * @param num A number
@@ -75,13 +116,28 @@ function areaOfCircle(radius: number) {
 
 /**
  * https://www.jshero.net/en/koans/round.html
+ *
+ * 1. Divide the number by 100 thus getting a decimal value easily rounded to the closes
+ *    integer.
+ *
+ * 2. Rounding that value to the closes integer
+ *
+ * 3. Multiplying that number with 100 to get the full hundredth value.
+ *
+ * https://www.jshero.net/en/koans/round.html
+ *
  * @param num A float or integer
  * @returns The `num` parameter rounded to the closest hundred
  */
 function roundToClosestHundred(num: number) {
   return Math.round(num / 100) * 100;
 }
-
+/**
+ * Generate a random integer between two numbers
+ *
+ * @param min The minimum generated int
+ * @param max The maximum generated int
+ */
 function randomInt(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -228,3 +284,21 @@ if (!module.parent) {
   console.log(randomInt(2, 6));
   console.log(randomInt(2, 6));
 }
+
+export {
+  onesDigit,
+  isEven,
+  isOdd,
+  mean,
+  midrange,
+  hypotenuse,
+  roundToClosestHundred,
+  randomInt,
+  dice,
+  median,
+  gcd,
+  isPrime,
+  sumMatrix,
+  max,
+  numInstr
+};

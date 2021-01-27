@@ -27,13 +27,13 @@ function joinAPICalls() {
     toArray()
   );
 
-  const sixTodosIncompleted = getSixTodos$.pipe(
+  const sixTodosIncompleted$ = getSixTodos$.pipe(
     flatMap(value => value),
     filter(todo => !todo.completed),
     toArray()
   );
 
-  sixTodosIncompleted
+  sixTodosIncompleted$
     .pipe(
       flatMap(todo => todo),
       mergeMap(todo =>
