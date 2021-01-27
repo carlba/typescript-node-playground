@@ -15,7 +15,7 @@
     "ts-node-dev": "cd src && ts-node-dev",
     "moment": "ts-node-dev src/moment-playground.ts",
     "build": "tsc",
-    "build:docs": "typedoc --out docs src --theme node_modules/eledoc/bin/default/",
+    "build:docs": "typedoc --out docs src --theme ./node_modules/typedoc-theme-dark/dist/dark",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "gts check",
     "clean": "gts clean",
@@ -33,6 +33,7 @@
     "gts": "^2.0.2",
     "ts-node-dev": "^1.0.0-pre.44",
     "typedoc": "^0.20.19",
+    "typedoc-theme-dark": "0.0.5",
     "typescript": "^4.1.3"
   },
   "dependencies": {
