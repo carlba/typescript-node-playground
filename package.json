@@ -15,7 +15,7 @@
     "ts-node-dev": "cd src && ts-node-dev",
     "moment": "ts-node-dev src/moment-playground.ts",
     "build": "tsc",
-    "build:docs": "typedoc --out docs src --theme ./node_modules/typedoc-theme-dark/dist/dark",
+    "build:docs": "typedoc --out docs src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "gts check",
     "clean": "gts clean",
