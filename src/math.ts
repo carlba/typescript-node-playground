@@ -1,4 +1,3 @@
-import { match } from 'assert';
 import { assert } from './utils';
 /**
  * Returns the last number in a decimal number
@@ -118,7 +117,7 @@ function gcd(a: number, b: number) {
 }
 
 /**
- * Calculate the median of an array of numbers
+ * Determine if a number is a prime number
  * @param arr An array of numbers
  */
 function isPrime(num: number) {
@@ -162,44 +161,70 @@ function numInstr(str: string): number | null {
 }
 
 if (!module.parent) {
-  // console.log(assert(onesDigit(2764), 4));
-  // // Modulo
-  // console.log(54321 % 4);
-  // console.log(54321 % 100);
-  // console.log(54321 % 1000);
-  // console.log(assert(isEven(4), true));
-  // console.log(assert(isOdd(1), true));
-  // // Mean and Median
-  // console.log(assert(mean(10, 5), 7.5));
-  // console.log(assert(median([1, 5, 10, 20]), 7.5));
-  // console.log(assert(median([100000, 222, 1000, 10, 60]), 222));
-  // // Geometry
-  // console.log(assert(hypotenuse(3, 4), 5));
-  // console.log(assert(midrange(3, 9, 1), 5));
-  // // PI
-  // console.log(assert(areaOfCircle(2), 4 * Math.PI));
-  // // GCD
-  // console.log(assert(gcd(100, 96), 4));
-  // // Prime
-  // const primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
-  // const nonPrimeNumbers = [0, 1, 4, 6, 8, 9];
-  // primeNumbers.forEach(primeNumber =>
-  //   console.log(assert(isPrime(primeNumber), true, `${primeNumber} is prime number`))
-  // );
-  // nonPrimeNumbers.forEach(nonPrimeNumber =>
-  //   console.log(assert(isPrime(nonPrimeNumber), false, `${nonPrimeNumber} is not prime number`))
-  // );
-  // // Matrix
-  // const arrayOfNumbersArray: number[][] = [
-  //   [1, 5, 10],
-  //   [2, 5, 5],
-  //   [5, 5, 3]
-  // ];
-  // console.log(sumMatrix(arrayOfNumbersArray));
-  // console.log(assert(max(1, 10, 5), 10));
-  // // Random
-  // console.log(randomInt(2, 6));
-  // console.log(randomInt(2, 6));
-  // console.log(randomInt(2, 6));
-  // console.log(randomInt(2, 6));
+  console.log(assert(onesDigit(2764), 4));
+  // Modulo
+  console.log(54321 % 4);
+  console.log(54321 % 100);
+  console.log(54321 % 1000);
+  console.log(assert(isEven(4), true));
+  console.log(assert(isOdd(1), true));
+  // Mean and Median
+  console.log(assert(mean(10, 5), 7.5));
+  console.log(assert(median([1, 5, 10, 20]), 7.5));
+  console.log(assert(median([100000, 222, 1000, 10, 60]), 222));
+  // Geometry
+  console.log(assert(hypotenuse(3, 4), 5));
+  console.log(assert(midrange(3, 9, 1), 5));
+  // PI
+  console.log(assert(areaOfCircle(2), 4 * Math.PI));
+  // GCD
+  console.log(assert(gcd(100, 96), 4));
+  // Prime
+  const primeNumbers = [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97
+  ];
+  const nonPrimeNumbers = [0, 1, 4, 6, 8, 9];
+  primeNumbers.forEach(primeNumber =>
+    console.log(assert(isPrime(primeNumber), true, `${primeNumber} is prime number`))
+  );
+  nonPrimeNumbers.forEach(nonPrimeNumber =>
+    console.log(assert(isPrime(nonPrimeNumber), false, `${nonPrimeNumber} is not prime number`))
+  );
+  // Matrix
+  const arrayOfNumbersArray: number[][] = [
+    [1, 5, 10],
+    [2, 5, 5],
+    [5, 5, 3]
+  ];
+  console.log(sumMatrix(arrayOfNumbersArray));
+  console.log(assert(max(1, 10, 5), 10));
+  // Random
+  console.log(randomInt(2, 6));
+  console.log(randomInt(2, 6));
+  console.log(randomInt(2, 6));
+  console.log(randomInt(2, 6));
 }

@@ -152,11 +152,4 @@ export function removeLines(stream: ReadStream, num: number) {
 // const testStream = fs.createReadStream(path.join(__dirname, 'test.txt'));
 // removeLines(testStream, 3).on('data', data => console.log(data.toString()));
 
-const test = `
-test
-
-`;
-
-console.log(test);
-
 export {};

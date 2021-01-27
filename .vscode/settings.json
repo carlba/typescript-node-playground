@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
-  "mocha.enabled": false
+  "mocha.enabled": false,
+  "cSpell.words": [
+    "brightsign"
+  ]
 }

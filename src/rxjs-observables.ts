@@ -2,14 +2,6 @@ import { from, interval, of } from 'rxjs';
 import { map, take, tap, flatMap, count, delay, mergeMap, toArray, filter } from 'rxjs/operators';
 import Axios from 'axios-observable';
 
-// const getRandomBoolean = () => Boolean(Math.round(Math.random()));
-
-// const oneRandomBooleanPerSecond$ = interval(1000).pipe(switchMap(() => of(getRandomBoolean())));
-
-// const oneRandomBooleanPerSecondFiveTimes$ = oneRandomBooleanPerSecond$.pipe(take(5));
-
-// oneRandomBooleanPerSecondFiveTimes$.subscribe(val => console.log(val));
-
 /**
  * This functions shows how to count something using RxJs
  */
@@ -25,7 +17,7 @@ function countEmissions() {
     tap(value => console.log(value))
   );
 }
-// countEmissions().subscribe();
+countEmissions().subscribe();
 
 function joinAPICalls() {
   const getSixTodos$ = from(['1', '2', '3', '4', '5', '6']).pipe(
@@ -52,9 +44,6 @@ function joinAPICalls() {
       toArray()
     )
     .subscribe(result => console.log('todos', result));
-
-  const test = ['Carl', 'Johanna', 'Stefan', ['test']].flatMap(value => value + 'test');
-  console.log(test);
 }
 
 // joinAPICalls();
