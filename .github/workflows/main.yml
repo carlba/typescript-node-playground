@@ -20,11 +20,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2      
+      
       - name: Install NPM CI
         run: npm ci
-
-      - name: Cache
+      
+      - name: Build TypeDoc
         uses: zakodium/typedoc-action@main
+      
       - name: Deploy github pages to gh-pages branch
         uses: crazy-max/ghaction-github-pages@v2
         with:
