@@ -26,9 +26,9 @@ jobs:
       
       - name: Build TypeDoc
         uses: zakodium/typedoc-action@main
-      
+
       - name: Deploy github pages to gh-pages branch
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v2.2.0
         with:
           target_branch: gh-pages
           build_dir: docs
