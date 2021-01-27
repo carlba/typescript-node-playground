@@ -21,13 +21,15 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install NPM CI
-        run: npm ci
+        run: npm install
 
       - name: Build TypeDoc
-        uses: zakodium/typedoc-action@main
+        run: npm run build:docs
 
       - name: Deploy github pages to gh-pages branch
         uses: crazy-max/ghaction-github-pages@v2.2.0
         with:
           target_branch: gh-pages
           build_dir: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
