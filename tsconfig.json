@@ -2,13 +2,12 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    // "rootDir": "./src",
+    "rootDir": "./src",
     "sourceMap": true,
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.json"]
+  }
 }
