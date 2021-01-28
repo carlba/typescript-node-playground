@@ -45,7 +45,6 @@ None
 
 ## Dev Dependencies
 
-- [gts](https://ghub.io/gts): Google TypeScript Style
 - [typescript](https://ghub.io/typescript): TypeScript is a language for application scale JavaScript development
 - [@types/node](https://ghub.io/@types/node): TypeScript definitions for Node.js
 
