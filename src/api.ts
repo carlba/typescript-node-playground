@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios from 'axios';
 import * as faker from 'faker';
 
 const accountIds = [
@@ -32,7 +32,6 @@ async function sendMany() {
   for (let i = 0; i < 100000; i++) {
     console.log(`The ${i} request`);
     generateSampleData('http://localhost:3031');
-
     console.log('test');
   }
 }

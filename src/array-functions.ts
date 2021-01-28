@@ -121,15 +121,6 @@ function generateMatrix(size: number) {
 }
 
 /**
- * ```typescript
- * function pairwise(arr: any[]) {
- *   const pairwiseArr = [];
- *   for (let i = 0; i < arr.length; i += 2) {
- *     pairwiseArr.push([numbers[i], numbers[i + 1]]);
- *   }
- *   return pairwiseArr;
- * }
- * ```
  * @param arr An array
  */
 function pairwise(arr: any[]) {
