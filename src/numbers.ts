@@ -26,3 +26,5 @@ function fahrenheitToCelsius(num: number) {
 
 console.log(assert(celsiusToFahrenheit(0), 32));
 console.log(assert(fahrenheitToCelsius(32), 0));
+
+export { celsiusToFahrenheit };
