@@ -162,4 +162,4 @@ console.log('generateMatrix', generateMatrix(5));
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log('pairwise numbers', pairwise(numbers));
 
-export { calculateTotalAgeIterative, calculateTotalAgeFunctionally };
+export { calculateTotalAgeIterative, calculateTotalAgeFunctionally, pairwise };
