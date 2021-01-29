@@ -121,7 +121,14 @@ function generateMatrix(size: number) {
 }
 
 /**
- * @param arr An array
+ * Returns pairs of an array in a new array
+ *
+ * ```typescript
+ * pairwise('[1,2,3,4,5,6]')
+ * [[1,2], [3,4], [5,6]]
+ * ```
+ *
+ * @param arr An array of anything
  */
 function pairwise(arr: any[]) {
   const pairwiseArr = [];
@@ -153,4 +160,11 @@ console.log('generateMatrix', generateMatrix(5));
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log('pairwise numbers', pairwise(numbers));
 
-export { calculateTotalAgeIterative, calculateTotalAgeFunctionally, pairwise };
+export {
+  calculateTotalAgeIterative,
+  calculateTotalAgeFunctionally,
+  pairwise,
+  sorting,
+  sortByBirthDay,
+  compareObjectKeys
+};
