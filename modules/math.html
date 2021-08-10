@@ -1,0 +1,710 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>math | typescript-node-project</title>
+	<meta name="description" content="Documentation for typescript-node-project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">typescript-node-project</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">typescript-node-project</a>
+				</li>
+				<li>
+					<a href="math.html">math</a>
+				</li>
+			</ul>
+			<h1>Module math</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#javascript-math" id="javascript-math" style="color: inherit; text-decoration: none;">
+							<h1>Javascript Math</h1>
+						</a>
+						<p>The Javascript <code>Math</code> library contains many nice helper functions for mathematics related
+						things.</p>
+					</div>
+					<a href="#modulo" id="modulo" style="color: inherit; text-decoration: none;">
+						<h1>Modulo</h1>
+					</a>
+					<p><a href="https://en.wikipedia.org/wiki/Modulo_operation">Modulo Operation</a></p>
+					<p>Modulo is a operation in computing that returns the remainder of a division. It&#39;s most
+						common usage is to check if a number is even or odd. If the is no * remainder of a division
+						with 2 the number is even.
+					<a href="math.html#iseven"><code>isEven</code></a></p>
+					<a href="#rounding-numbers" id="rounding-numbers" style="color: inherit; text-decoration: none;">
+						<h2>Rounding numbers</h2>
+					</a>
+					<ul>
+						<li><code>math.round()</code> - rounds a number to the nearest integer</li>
+						<li><code>math.floor()</code> - rounds a number downwards to the nearest integer</li>
+						<li><code>math.ceil()</code> - rounds a number upwards to the nearest integer</li>
+					</ul>
+					<pre><code class="language-typescript"><span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">round</span><span style="color: #000000">(</span><span style="color: #098658">1.49</span><span style="color: #000000">); </span><span style="color: #008000">//1</span>
+<span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">ceil</span><span style="color: #000000">(</span><span style="color: #098658">1.49</span><span style="color: #000000">); </span><span style="color: #008000">//2</span>
+<span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">floor</span><span style="color: #000000">(</span><span style="color: #098658">1.49</span><span style="color: #000000">); </span><span style="color: #008000">//1</span>
+</code></pre>
+					<a href="#random-numbers" id="random-numbers" style="color: inherit; text-decoration: none;">
+						<h2>Random Numbers</h2>
+					</a>
+					<p><code>Math.random()</code> returns a randomized value between 0 and 1;</p>
+					<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">randomNumber</span><span style="color: #000000"> = </span><span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">random</span><span style="color: #000000">(); </span><span style="color: #008000">// 0.6206372241429993</span>
+</code></pre>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#dice" class="tsd-kind-icon">dice</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#gcd" class="tsd-kind-icon">gcd</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#hypotenuse" class="tsd-kind-icon">hypotenuse</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#iseven" class="tsd-kind-icon">is<wbr>Even</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#isodd" class="tsd-kind-icon">is<wbr>Odd</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#isprime" class="tsd-kind-icon">is<wbr>Prime</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#max" class="tsd-kind-icon">max</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#mean" class="tsd-kind-icon">mean</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#median" class="tsd-kind-icon">median</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#midrange" class="tsd-kind-icon">midrange</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#numinstr" class="tsd-kind-icon">num<wbr>Instr</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#onesdigit" class="tsd-kind-icon">ones<wbr>Digit</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#randomint" class="tsd-kind-icon">random<wbr>Int</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#roundtoclosesthundred" class="tsd-kind-icon">round<wbr>ToClosest<wbr>Hundred</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="math.html#summatrix" class="tsd-kind-icon">sum<wbr>Matrix</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="dice" class="tsd-anchor"></a>
+					<h3>dice</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">dice<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L141">math.ts:141</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="gcd" class="tsd-anchor"></a>
+					<h3>gcd</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">gcd<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L155">math.ts:155</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>b: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="hypotenuse" class="tsd-anchor"></a>
+					<h3>hypotenuse</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">hypotenuse<span class="tsd-signature-symbol">(</span>num1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L97">math.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the hypotenuse of two numbers</p>
+								</div>
+								<p>Write a function hypotenuse that calculates the length of the hypotenuse of a right triangle. The length of the two
+									legs is passed to the function. Tip: In a right triangle the Pythagorean theorem is valid. If a and b are the
+									lengths of the two legs and c is the length of the hypotenuse,
+								the following is true: a² + b² = c². Since 3² + 4² = 5² applies, hypotenuse(3, 4) should return 5.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num1: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number</p>
+									</div>
+								</li>
+								<li>
+									<h5>num2: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="iseven" class="tsd-anchor"></a>
+					<h3>is<wbr>Even</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Even<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L51">math.ts:51</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if number is even</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A number</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isodd" class="tsd-anchor"></a>
+					<h3>is<wbr>Odd</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Odd<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L59">math.ts:59</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if number is even</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A number</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="isprime" class="tsd-anchor"></a>
+					<h3>is<wbr>Prime</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Prime<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L175">math.ts:175</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if a number is a prime number</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="max" class="tsd-anchor"></a>
+					<h3>max</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">max<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>nums<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L200">math.ts:200</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates the maximum number of the supplied arguments</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>nums: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A variable amount of arguments of numbers</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="mean" class="tsd-anchor"></a>
+					<h3>mean</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">mean<span class="tsd-signature-symbol">(</span>num1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L68">math.ts:68</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the mean of two numbers</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num1: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number</p>
+									</div>
+								</li>
+								<li>
+									<h5>num2: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="median" class="tsd-anchor"></a>
+					<h3>median</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">median<span class="tsd-signature-symbol">(</span>arr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L149">math.ts:149</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculate the median of an array of numbers</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arr: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>An array of numbers</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="midrange" class="tsd-anchor"></a>
+					<h3>midrange</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">midrange<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L82">math.ts:82</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the hypotenuse of two numbers</p>
+								</div>
+								<p>Returns the midrange  of 3 numbers. The midrange is the mean of the smallest and largest number.
+								<a href="https://www.jshero.net/en/koans/minmax.html">https://www.jshero.net/en/koans/minmax.html</a></p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="numinstr" class="tsd-anchor"></a>
+					<h3>num<wbr>Instr</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">num<wbr>Instr<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L210">math.ts:210</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the first integer in a string</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A string that possibly contains integers</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+							<p>The first integer in the string or null if no matches</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="onesdigit" class="tsd-anchor"></a>
+					<h3>ones<wbr>Digit</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">ones<wbr>Digit<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L43">math.ts:43</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the last number in a decimal number</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A number</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="randomint" class="tsd-anchor"></a>
+					<h3>random<wbr>Int</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">random<wbr>Int<span class="tsd-signature-symbol">(</span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L137">math.ts:137</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generate a random integer between two numbers</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>min: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The minimum generated int</p>
+									</div>
+								</li>
+								<li>
+									<h5>max: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The maximum generated int</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="roundtoclosesthundred" class="tsd-anchor"></a>
+					<h3>round<wbr>ToClosest<wbr>Hundred</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">round<wbr>ToClosest<wbr>Hundred<span class="tsd-signature-symbol">(</span>num<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L128">math.ts:128</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><a href="https://www.jshero.net/en/koans/round.html">https://www.jshero.net/en/koans/round.html</a></p>
+								</div>
+								<ol>
+									<li><p>Divide the number by 100 thus getting a decimal value easily rounded to the closes
+										integer.</p>
+									</li>
+									<li><p>Rounding that value to the closes integer</p>
+									</li>
+									<li><p>Multiplying that number with 100 to get the full hundredth value.</p>
+									</li>
+								</ol>
+								<p><a href="https://www.jshero.net/en/koans/round.html">https://www.jshero.net/en/koans/round.html</a></p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>num: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A float or integer</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The <code>num</code> parameter rounded to the closest hundred</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="summatrix" class="tsd-anchor"></a>
+					<h3>sum<wbr>Matrix</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">sum<wbr>Matrix<span class="tsd-signature-symbol">(</span>arr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/carlba/typescript-node-playground/blob/d6b7853/src/math.ts#L187">math.ts:187</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculate the sum of a matrix of numbers</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arr: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A matrix of numbers</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="array_functions.html">array-<wbr>functions</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="callback_functions.html">callback-<wbr>functions</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="file.html">file</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="json_import_json_import.html">json-<wbr>import/json-<wbr>import</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="math.html">math</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="string.html">string</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="utils.html">utils</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#dice" class="tsd-kind-icon">dice</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#gcd" class="tsd-kind-icon">gcd</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#hypotenuse" class="tsd-kind-icon">hypotenuse</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#iseven" class="tsd-kind-icon">is<wbr>Even</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#isodd" class="tsd-kind-icon">is<wbr>Odd</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#isprime" class="tsd-kind-icon">is<wbr>Prime</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#max" class="tsd-kind-icon">max</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#mean" class="tsd-kind-icon">mean</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#median" class="tsd-kind-icon">median</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#midrange" class="tsd-kind-icon">midrange</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#numinstr" class="tsd-kind-icon">num<wbr>Instr</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#onesdigit" class="tsd-kind-icon">ones<wbr>Digit</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#randomint" class="tsd-kind-icon">random<wbr>Int</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#roundtoclosesthundred" class="tsd-kind-icon">round<wbr>ToClosest<wbr>Hundred</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="math.html#summatrix" class="tsd-kind-icon">sum<wbr>Matrix</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
